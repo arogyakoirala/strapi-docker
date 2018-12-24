@@ -3,7 +3,7 @@ set -ea
 
 _stopStrapi() {
   echo "Stopping strapi"
-  kill -SIGINT "$strapiPID"
+  kill -INT "$strapiPID"
   wait "$strapiPID"
 }
 
