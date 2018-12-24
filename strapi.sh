@@ -7,7 +7,7 @@ _stopStrapi() {
   wait "$strapiPID"
 }
 
-trap _stopStrapi TERM SIGINT
+trap _stopStrapi TERM INT
 
 cd /usr/src/api
 
