@@ -14,7 +14,7 @@ WORKDIR /usr/src/api
 RUN echo "unsafe-perm = true" >> ~/.npmrc
 
 
-copy strapi ./
+COPY strapi ./
 RUN cd strapi && npm run setup
 RUN cd ..
 
