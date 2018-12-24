@@ -1,6 +1,3 @@
-FROM ubuntu as intermediate
-RUN apt-get update && apt-get install -y git
-
 FROM node:11.1.0-alpine
 
 LABEL maintainer="Luca Perret <perret.luca@gmail.com>" \
@@ -17,9 +14,11 @@ WORKDIR /usr/src/api
 RUN echo "unsafe-perm = true" >> ~/.npmrc
 
 
-RUN git clone https://github.com/arogyakoirala/strapi.git
+copy strapi ./
 RUN cd strapi && npm run setup
 RUN cd ..
+
+
 
 COPY strapi.sh ./
 RUN chmod +x ./strapi.sh
