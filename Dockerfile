@@ -13,7 +13,6 @@ WORKDIR /usr/src/api
 
 RUN echo "unsafe-perm = true" >> ~/.npmrc
 
-RUN apt-get update && apt-get install -y git
 RUN git clone https://github.com/arogyakoirala/strapi.git
 RUN cd strapi && npm run setup
 RUN cd ..
