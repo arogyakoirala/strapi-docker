@@ -1,3 +1,0 @@
-[submodule "strapi"]
-	path = strapi
-	url = https://github.com/arogyakoirala/strapi.git
