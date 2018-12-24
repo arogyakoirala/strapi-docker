@@ -15,6 +15,7 @@ RUN echo "unsafe-perm = true" >> ~/.npmrc
 
 
 COPY strapi ./
+RUN ls -ls
 RUN cd strapi && npm run setup
 RUN cd ..
 
